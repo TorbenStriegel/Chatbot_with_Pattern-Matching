@@ -1,28 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-
-/**
- * Matcher.java
- *
- * Matches a pattern against an input
- * e.g.
- *
- *  <pre>
- *  String pattern = "Hello this is a ?x";
- *  String input   = "Hello this is a test";
- *
- *  Matcher m = new Matcher();
- *
- *  boolean match = m.match(pattern,input);
- *  m.printBindings();
- *  </pre>
- *
- * Created: Wed Aug  2 09:43:07 2000
- *
- * @author Stephan Baldes
- */
-
 public class Matcher {
 
   /** shows debug-traces if true */
@@ -117,33 +95,6 @@ public class Matcher {
        return strings;
     }
     
-
-
-    /** Toplevel-method, matches the string <code>patternS</code> 
-     *  against <code>inputS</code> and collect the correct 
-     * variable-binding.
-     *  @return <code>true</code> if it matches <code>false</code> otherwise.
-     *
-     *  The use of segment-match is included. The name of a
-     *  segment-variable has to start with <code>?*</code>. 
-     *  <p> Example:
-     *  <pre>
-     *  String pattern = "?*x is ?*y";
-     *  String input   = "Hello this is a test";        
-     *
-     *  Matcher m = new Matcher();
-     *
-     *  boolean match = m.match(pattern,input);
-     *  m.printBindings();
-     *  <pre>
-     *
-     *   <pre>  
-     *
-     *   -->
-     *        ?*x = Hello this
-     *        ?*y = a test 
-     *   </pre>
-     */
 
     public boolean match(String patternS, String inputS) {
        fail = false;
